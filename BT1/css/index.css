@@ -1,0 +1,124 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(33, 33, 138);
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    font-size: 20px;
+    list-style: none;
+    color: white;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.title {
+    grid-column: 1 / 2;
+}
+.title h2 {
+    text-align: center;
+}
+.title hr {
+    height: 2px;
+    background-color: black;
+}
+.content {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.content_cart {
+    width: 45%;
+    height: 80vh;
+    border: 1px solid silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.img img {
+    width: 90%;
+    margin-top: 10px;
+}
+.name p {
+    font-size: 22px;
+}
+.money {
+    font-weight: 900;
+    font-size: 20px;
+}
+.money_sale {
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: red;
+}
+.button button {
+    width: 170px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: rgb(228, 59, 59);
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.content_2 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    background-image: url(/BT1/images/3.PNG);
+    background-size: cover;
+    background-position: center;
+}
+.contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.contain p {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 50px;
+}
+.contain button {
+    width: 160px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    height: 50px;
+}
+.content_2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
